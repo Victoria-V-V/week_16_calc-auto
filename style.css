@@ -1,0 +1,104 @@
+body {
+    max-width: 1000px;
+    margin: 30px auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+h1,
+h2,
+h4 {
+    margin: 5px;
+}
+
+/* h3 {
+    border: 1px solid red;
+} */
+/* ВСТАВИТЬ JS */
+
+.configurator {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.parameters {
+    position: relative;
+    display: flex;
+    column-gap: 70px;
+}
+
+.parameters::before {
+    content: "";
+    position: absolute;
+    right: 1%;
+    left: 10%;
+    bottom: 8px;
+    height: 2px;
+    background: rgb(223, 228, 232);
+}
+
+.engine,
+.color,
+.interior,
+.wheels,
+.options {
+    position: relative;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+
+
+    font-size: 16px;
+    color: rgb(0, 30, 80);
+}
+
+.engine__button,
+.color__button,
+.interior__button,
+.wheels__button,
+.options__button {
+    padding: 0px 24px;
+    display: inline-block;
+    background: rgb(255, 255, 255);
+}
+
+.car {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.spec {
+    margin-top: 30px;
+    border: 2px solid rgb(0, 30, 80);
+    min-width: 700px;
+}
+
+.spec__container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.spec__title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.spec__car,
+.spec__option,
+.spec__total-price {
+    display: flex;
+    justify-content: space-between;
+}
