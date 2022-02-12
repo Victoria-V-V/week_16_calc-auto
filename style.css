@@ -342,7 +342,19 @@ h4 {
 }
 
 .optionsCheckbox {
+    display: flex;
     border: 1px solid #999;
     padding: 5px;
     cursor: pointer;
+}
+
+.options__text {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 40px;
+    min-width: 500px;
+}
+
+.options__price {
+    font-weight: bold;
 }
