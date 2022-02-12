@@ -1,6 +1,7 @@
 body {
     max-width: 1000px;
     margin: 30px auto;
+    padding: 0 5%;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -15,11 +16,6 @@ h4 {
     margin: 5px;
 }
 
-/* h3 {
-    border: 1px solid red;
-} */
-/* ВСТАВИТЬ JS */
-
 .configurator {
     margin-top: 20px;
     display: flex;
@@ -31,6 +27,7 @@ h4 {
     position: relative;
     display: flex;
     column-gap: 70px;
+    margin-bottom: 30px;
 }
 
 .parameters::before {
@@ -42,6 +39,8 @@ h4 {
     height: 2px;
     background: rgb(223, 228, 232);
 }
+
+
 
 .engine,
 .color,
@@ -62,14 +61,34 @@ h4 {
     color: rgb(0, 30, 80);
 }
 
-.engine__button,
-.color__button,
-.interior__button,
-.wheels__button,
-.options__button {
+.engine__button-area,
+.color__button-area,
+.interior__button-area,
+.wheels__button-area,
+.options__button-area {
     padding: 0px 24px;
     display: inline-block;
     background: rgb(255, 255, 255);
+}
+
+#engineButton,
+#colorButton,
+#interiorButton,
+#wheelsButton,
+#optionsButton {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+.parameters__button {
+    background-color: rgb(0, 30, 80);
+    color: rgb(0, 30, 80);
+}
+
+.parameters__button-checked {
+    background-color: green;
+    color: white;
 }
 
 .car {
@@ -101,4 +120,229 @@ h4 {
 .spec__total-price {
     display: flex;
     justify-content: space-between;
+}
+
+.spec__total-price {
+    border-top: 1px solid rgb(223, 228, 232);
+    padding-top: 10px;
+}
+
+.engineForm__select {
+    margin-bottom: 10px;
+}
+
+.active {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+/* engineForm__radio */
+.engineForm__radio {
+    display: flex;
+}
+
+.engineForm_radio_btn {
+    margin-right: 10px;
+}
+
+.engineForm_radio_btn input[type=radio] {
+    display: none;
+}
+
+.engineForm_radio_btn label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0px 15px;
+    line-height: 34px;
+    border: 1px solid #999;
+    border-radius: 6px;
+    user-select: none;
+}
+
+/* Checked */
+.engineForm_radio_btn input[type=radio]:checked+label {
+    border: 2px solid rgb(0, 30, 80);
+}
+
+.engine__specifications {
+    display: grid;
+    grid-template-rows: repeat(70px, 70px, 50px);
+}
+
+.engine__title-price,
+.acceleration {
+    border-bottom: 1px solid rgba(94, 89, 89, 0.5);
+}
+
+.engine__price {
+    font-weight: bold;
+}
+
+.engine__title-price,
+.acceleration,
+.consumption {
+    display: flex;
+    min-width: 250px;
+    justify-content: space-between;
+}
+
+/* engineForm__radio END*/
+
+/* colorForm__radio */
+.colorForm__radio {
+    display: flex;
+}
+
+.color__specifications {
+    padding-top: 5px;
+    display: flex;
+    column-gap: 10px;
+}
+
+.color-img {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.color__price {
+    font-weight: bold;
+}
+
+.colorForm_radio_btn {
+    margin-right: 10px;
+}
+
+.colorForm_radio_btn input[type=radio] {
+    display: none;
+}
+
+.colorForm_radio_btn label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0px 15px;
+    line-height: 34px;
+    border: 1px solid #999;
+    border-radius: 6px;
+    user-select: none;
+}
+
+/* Checked */
+.colorForm_radio_btn input[type=radio]:checked+label {
+    border: 2px solid rgb(0, 30, 80);
+}
+
+/* colorForm__radio END*/
+
+
+
+
+/* interiorForm__radio */
+.interiorForm__radio {
+    display: flex;
+}
+
+.interior__specifications {
+    padding-top: 5px;
+    display: flex;
+    column-gap: 10px;
+}
+
+.interior-img {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.interior__price {
+    font-weight: bold;
+}
+
+.interiorForm_radio_btn {
+    margin-right: 10px;
+}
+
+.interiorForm_radio_btn input[type=radio] {
+    display: none;
+}
+
+.interiorForm_radio_btn label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0px 15px;
+    line-height: 34px;
+    border: 1px solid #999;
+    border-radius: 6px;
+    user-select: none;
+}
+
+/* Checked */
+.interiorForm_radio_btn input[type=radio]:checked+label {
+    border: 2px solid rgb(0, 30, 80);
+}
+
+/* interiorForm__radio END*/
+
+/* wheelsForm__radio */
+.wheelsForm__radio {
+    display: flex;
+}
+
+.wheels__specifications {
+    padding-top: 5px;
+    display: flex;
+    column-gap: 10px;
+}
+
+.wheels-img {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.wheels__price {
+    font-weight: bold;
+}
+
+.wheelsForm_radio_btn {
+    margin-right: 10px;
+}
+
+.wheelsForm_radio_btn input[type=radio] {
+    display: none;
+}
+
+.wheelsForm_radio_btn label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0px 15px;
+    line-height: 34px;
+    border: 1px solid #999;
+    border-radius: 6px;
+    user-select: none;
+}
+
+/* Checked */
+.wheelsForm_radio_btn input[type=radio]:checked+label {
+    border: 2px solid rgb(0, 30, 80);
+}
+
+/* wheelsForm__radio END*/
+
+.options__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.optionsCheckbox {
+    border: 1px solid #999;
+    padding: 5px;
+    cursor: pointer;
 }

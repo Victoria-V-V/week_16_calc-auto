@@ -13,38 +13,271 @@
     <header class="header">
         <h1>Конфигуратор</h1>
         <h2>Tiguan</h2>
-        <h4>Tiguan Respect</h4>
+        <h4 id="carEngineChoosen">Tiguan Respect</h4>
     </header>
 
     <main>
         <section class="configurator">
             <div class="parameters">
-                <button class="engine">
+                <button class="engine" id="engine">
                     <div class="engine__title">Двигатель</div>
-                    <div class="engine__button">1</div>
+                    <div class="engine__button-area">
+                        <div id="engineButton" class="parameters__button"> &#128504;</div>
+                    </div>
                 </button>
-                <button class="color">
+                <button class="color" id="color">
                     <div class="color__title">Цвет</div>
-                    <div class="color__button">2</div>
+                    <div class="color__button-area">
+                        <div id="colorButton" class="parameters__button">&#128504;</div>
+                    </div>
                 </button>
-                <button class="interior">
+                <button class="interior" id="interior">
                     <div class="interior__title">Обивка салона</div>
-                    <div class="interior__button">3</div>
+                    <div class="interior__button-area">
+                        <div id="interiorButton" class="parameters__button">&#128504;</div>
+                    </div>
                 </button>
-                <button class="wheels">
+                <button class="wheels" id="wheels">
                     <div class="wheels__title">Колеса</div>
-                    <div class="wheels__button">4</div>
+                    <div class="wheels__button-area">
+                        <div id="wheelsButton" class="parameters__button">&#128504;</div>
+                    </div>
                 </button>
-                <button class="options">
+                <button class="options" id="options">
                     <div class="options__title">Опции</div>
-                    <div class="options__button">5</div>
+                    <div class="options__button-area">
+                        <div id="optionsButton" class="parameters__button">&#128504;</div>
+                    </div>
                 </button>
+            </div>
+
+            <div id="engineForm">
+                <select class="engineForm__select">
+                    <option class=" input" value="transmissionAll">КПП</option>
+                    <option class="input" value="transmissionManual">Механика</option>
+                    <option class="input" value="transmissionAutomatic ">Автомат</option>
+                </select>
+                <div class="engineForm__radio">
+                    <div class="engineForm_radio_btn">
+                        <input id="engine1" type="radio" name="engineRadio" value="2134900" checked>
+                        <label for="engine1">
+                            <div class="engine__specifications">
+                                <div class="engine__title-price">
+                                    <div class="engine__title">TSI 125 л.с.<br> 6-МКП</div>
+                                    <div class="engine__price">2134900 ₽</div>
+                                </div>
+                                <div class="acceleration">
+                                    <div class="acceleration__title">Разгон до <br> 100 км/ч</div>
+                                    <div class="acceleration__speed">10,5 сек.</div>
+                                </div>
+                                <div class="consumption">
+                                    <div class="consumption__title">Расход</div>
+                                    <div class="consumption__speed">7,2 л/100км</div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="engineForm_radio_btn">
+                        <input id="engine2" type="radio" name="engineRadio" value="2264900">
+                        <label for="engine2">
+                            <div class="engine__specifications">
+                                <div class="engine__title-price">
+                                    <div class="engine__title">TSI 150 л.с.<br> 6-АКП</div>
+                                    <div class="engine__price">2264900 ₽</div>
+                                </div>
+                                <div class="acceleration">
+                                    <div class="acceleration__title">Разгон до<br> 100 км/ч</div>
+                                    <div class="acceleration__speed">9,3 сек.</div>
+                                </div>
+                                <div class="consumption">
+                                    <div class="consumption__title">Расход</div>
+                                    <div class="consumption__speed">7,5 л/100км</div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="engineForm_radio_btn">
+                        <input id="engine3" type="radio" name="engineRadio" value="2364900">
+                        <label for="engine3">
+                            <div class="engine__specifications">
+                                <div class="engine__title-price">
+                                    <div class="engine__title">TSI 4MOTION 150 л.с.<br> 6-АКП</div>
+                                    <div class="engine__price">2364900 ₽</div>
+                                </div>
+                                <div class="acceleration">
+                                    <div class="acceleration__title">Разгон до <br>100 км/ч</div>
+                                    <div class="acceleration__speed">9,8 сек.</div>
+                                </div>
+                                <div class="consumption">
+                                    <div class="consumption__title">Расход</div>
+                                    <div class="consumption__speed">7,5 л/100км</div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div id="colorForm">
+                <div class="colorForm__radio">
+                    <div class="colorForm_radio_btn">
+                        <input id="color1" type="radio" name="colorRadio" value="0" checked>
+                        <label for="color1">
+                            <div class="color__specifications">
+                                <div class="color__container">
+                                    <div class="color__container-img"><img class="color-img"
+                                            src="https://r-media.volkswagen.com/v1/VW/55R/2022/MP1/20220326/ru-RU-ru/0Q0Q/GZ/0B3,0ES,0K0,0MR,0NB,0RE,1A5,1D0,1G9,1SK,1X1,1ZK,2EI,2FM,2H5,2J0,3CA,3FA,3GB,3H0,3L3,3LM,3QT,3S2,3T2,3ZU,4A3,4E0,4GF,4I2,4KC,4L2,4UF,4X3,4ZE,5C0,5KN,5MA,5RQ,5SL,5XJ,5ZF,6E2,6FF,6I0,6K2,6M0,6NA,6Q2,6XN,7AA,7B3,7L3,7M5,7MM,7N0,7P0,7Q0,7W0,7X0,7Y0,8G0,8IR,8N6,8Q1,8S6,8SK,8T6,8TB,8WA,9E5,9I5,9JA,9M0,9P9,9S6,9Z0,9ZX,A8B,AV1,B37,CY9,DG6,E0A,EL0,ER1,G0R,GP1,I8I,K8G,KA0,KH7,KL1,L0L,N4C,NZ3,Q1A,QJ0,QK0,QQ0,QV0,TL1,U9B,UH2,UK1,VF0/D6ColorTile/b19d7b4a-df80-487c-908a-47785dbb35fc/3f952bf2de11871d3b4f3d256be439a3802c74a8bfc83352083f8a8667ac4052.jpg"
+                                            alt=""></div>
+                                </div>
+                                <div class="color__text">
+                                    <div class="color__title">Белый "Pure"</div>
+                                    <div class="color__price">Без изменения цены</div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="colorForm_radio_btn">
+                        <input id="color2" type="radio" name="colorRadio" value="19000">
+                        <label for="color2">
+                            <div class="color__specifications">
+                                <div class="color__container">
+                                    <div class="color__container-img"><img class="color-img"
+                                            src="https://r-media.volkswagen.com/v1/VW/55R/2022/MP1/20220326/ru-RU-ru/7H7H/GZ/0B3,0ES,0K0,0MR,0NB,0RE,1A5,1D0,1G9,1SK,1X1,1ZK,2EI,2FM,2H5,2J0,3CA,3FA,3GB,3H0,3L3,3LM,3QT,3S2,3T2,3ZU,4A3,4E0,4GF,4I2,4KC,4L2,4UF,4X3,4ZE,5C0,5KN,5MA,5RQ,5SL,5XJ,5ZF,6E2,6FF,6I0,6K2,6M0,6NA,6Q2,6XN,7AA,7B3,7L3,7M5,7MM,7N0,7P0,7Q0,7W0,7X0,7Y0,8G0,8IR,8N6,8Q1,8S6,8SK,8T6,8TB,8WA,9E5,9I5,9JA,9M0,9P9,9S6,9Z0,9ZX,A8B,AV1,B37,CY9,DG6,E0A,EL0,ER1,G0R,GP1,I8I,K8G,KA0,KH7,KL1,L0L,N4C,NZ3,Q1A,QJ0,QK0,QQ0,QV0,TL1,U9B,UH2,UK1,VF0/D6ColorTile/b19d7b4a-df80-487c-908a-47785dbb35fc/502b51a9b494d332839f7e546aac381760196e44e5a944423c6e842cc8fb12b1.jpg"
+                                            alt=""></div>
+                                </div>
+                                <div class="color__text">
+                                    <div class="color__title">Красный "Ruby Red"</div>
+                                    <div class="color__price">19000 ₽</div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="colorForm_radio_btn">
+                        <input id="color3" type="radio" name="colorRadio" value="19000">
+                        <label for="color3">
+                            <div class="color__specifications">
+                                <div class="color__container">
+                                    <div class="color__container-img"><img class="color-img"
+                                            src="https://r-media.volkswagen.com/v1/VW/55R/2022/MP1/20220326/ru-RU-ru/0A0A/GZ/0B3,0ES,0K0,0MR,0NB,0RE,1A5,1D0,1G9,1SK,1X1,1ZK,2EI,2FM,2H5,2J0,3CA,3FA,3GB,3H0,3L3,3LM,3QT,3S2,3T2,3ZU,4A3,4E0,4GF,4I2,4KC,4L2,4UF,4X3,4ZE,5C0,5KN,5MA,5RQ,5SL,5XJ,5ZF,6E2,6FF,6I0,6K2,6M0,6NA,6Q2,6XN,7AA,7B3,7L3,7M5,7MM,7N0,7P0,7Q0,7W0,7X0,7Y0,8G0,8IR,8N6,8Q1,8S6,8SK,8T6,8TB,8WA,9E5,9I5,9JA,9M0,9P9,9S6,9Z0,9ZX,A8B,AV1,B37,CY9,DG6,E0A,EL0,ER1,G0R,GP1,I8I,K8G,KA0,KH7,KL1,L0L,N4C,NZ3,Q1A,QJ0,QK0,QQ0,QV0,TL1,U9B,UH2,UK1,VF0/D6ColorTile/b19d7b4a-df80-487c-908a-47785dbb35fc/48b1a98ab0d62cf431a97fb35eeef16cb42689d4b9c2470ae5bb767a60da7d68.jpg"
+                                            alt=""></div>
+                                </div>
+                                <div class="color__text">
+                                    <div class="color__title">Синий "Ruby Reef"</div>
+                                    <div class="color__price">19000 ₽</div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="interiorForm">
+                <div class="interiorForm__radio">
+                    <div class="interiorForm_radio_btn">
+                        <input id="interior1" type="radio" name="interiorRadio" value="0" checked>
+                        <label for="interior1">
+                            <div class="interior__specifications">
+                                <div class="interior__container">
+                                    <div class="interior__container-img"><img class="interior-img"
+                                            src="https://r-media.volkswagen.com/v1/VW/55R/2022/MP1/20220326/ru-RU-ru/0Q0Q/GZ/0B3,0ES,0K0,0MR,0NB,0RE,1A5,1D0,1G9,1SK,1X1,1ZK,2EI,2FM,2H5,2J0,3CA,3FA,3GB,3H0,3L3,3LM,3QT,3S2,3T2,3ZU,4A3,4E0,4GF,4I2,4KC,4L2,4UF,4X3,4ZE,5C0,5KN,5MA,5RQ,5SL,5XJ,5ZF,6E2,6FF,6I0,6K2,6M0,6NA,6Q2,6XN,7AA,7B3,7L3,7M5,7MM,7N0,7P0,7Q0,7W0,7X0,7Y0,8G0,8IR,8N6,8Q1,8S6,8SK,8T6,8TB,8WA,9E5,9I5,9JA,9M0,9P9,9S6,9Z0,9ZX,A8B,AV1,B37,CY9,DG6,E0A,EL0,ER1,G0R,GP1,I8I,K8G,KA0,KH7,KL1,L0L,N4C,NZ3,Q1A,QJ0,QK0,QQ0,QV0,TL1,U9B,UH2,UK1,VF0/D6InteriorTile/b19d7b4a-df80-487c-908a-47785dbb35fc/fad2bf4a8dd9b038386feb570643ca7bdd01858fde680c28e1bbe90e73fc3397.jpg"
+                                            alt=""></div>
+                                </div>
+                                <div class="interior__text">
+                                    <div class="interior__title">Антрацит</div>
+                                    <div class="interior__price">Без изменения цены</div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="interiorForm_radio_btn">
+                        <input id="interior2" type="radio" name="interiorRadio" value="21000">
+                        <label for="interior2">
+                            <div class="interior__specifications">
+                                <div class="interior__container">
+                                    <div class="interior__container-img"><img class="interior-img"
+                                            src="https://r-media.volkswagen.com/v1/VW/55R/2022/MP1/20220326/ru-RU-ru/0Q0Q/HJ/0B3,0ES,0K0,0MR,0NB,0RE,1A5,1D0,1G9,1SK,1X1,1ZK,2EI,2FM,2H5,2J0,3CA,3FA,3GB,3H0,3L3,3LM,3QT,3S2,3T2,3ZU,4A3,4E0,4GF,4I2,4KC,4L2,4UF,4X3,4ZE,5C0,5KN,5MA,5RQ,5SL,5XJ,5ZF,6E2,6FF,6I0,6K2,6M0,6NA,6Q2,6XN,7AA,7B3,7L3,7M5,7MM,7N0,7P0,7Q0,7W0,7X0,7Y0,8G0,8IR,8N6,8Q1,8S6,8SK,8T6,8TB,8WA,9E5,9I5,9JA,9M0,9P9,9S6,9Z0,9ZX,A8B,AV1,B37,CY9,DG6,E0A,EL0,ER1,G0R,GP1,I8I,K8G,KA0,KH7,KL1,L0L,N4C,NZ3,Q1A,QJ0,QK0,QQ0,QV0,TL1,U9B,UH2,UK1,VF0/D6InteriorTile/b19d7b4a-df80-487c-908a-47785dbb35fc/055bcdc094edd42492fbe2f3a5d3c003d9dbb5a130d151e31c1ac32df288b05a.jpg"
+                                            alt=""></div>
+                                </div>
+                                <div class="interior__text">
+                                    <div class="interior__title">Черный Titanium</div>
+                                    <div class="interior__price">21000 ₽</div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div id="wheelsForm">
+                <div class="wheelsForm__radio">
+                    <div class="wheelsForm_radio_btn">
+                        <input id="wheels1" type="radio" name="wheelsRadio" value="0" checked>
+                        <label for="wheels1">
+                            <div class="wheels__specifications">
+                                <div class="wheels__container">
+                                    <div class="wheels__container-img"><img class="wheels-img"
+                                            src="https://r-media.volkswagen.com/v1/VW/55R/2022/MP1/20220326/ru-RU-ru/0Q0Q/GZ/0B3,0ES,0K0,0MR,0NB,0RE,1A5,1D0,1G9,1SK,1X1,1ZK,2EI,2FM,2H5,2J0,3CA,3FA,3GB,3H0,3L3,3LM,3QT,3S2,3T2,3ZU,4A3,4E0,4GF,4I2,4KC,4L2,4UF,4X3,4ZE,5C0,5KN,5MA,5RQ,5SL,5XJ,5ZF,6E2,6FF,6I0,6K2,6M0,6NA,6Q2,6XN,7AA,7B3,7L3,7M5,7MM,7N0,7P0,7Q0,7W0,7X0,7Y0,8G0,8IR,8N6,8Q1,8S6,8SK,8T6,8TB,8WA,9E5,9I5,9JA,9M0,9P9,9S6,9Z0,9ZX,A8B,AV1,B37,CQ9,DG6,E0A,EL0,ER1,G0R,GP1,I8I,K8G,KA0,KH7,KL1,L0L,N4C,NZ3,Q1A,QJ0,QK0,QQ0,QV0,TL1,U9B,UH2,UK1,VF0/D6RimTile/b19d7b4a-df80-487c-908a-47785dbb35fc/9b74d47510feff72c2b0eae3fe39cb3b45a7d4aa52487308a3719c02ea6e1583.jpg"
+                                            alt=""></div>
+                                </div>
+                                <div class="wheels__text">
+                                    <div class="wheels__title">Легкосплавные колесные диски Montana 7J x 17</div>
+                                    <div class="wheels__price">Без изменения цены</div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="wheelsForm_radio_btn">
+                        <input id="wheels2" type="radio" name="wheelsRadio" value="11000">
+                        <label for="wheels2">
+                            <div class="wheels__specifications">
+                                <div class="wheels__container">
+                                    <div class="wheels__container-img"><img class="wheels-img"
+                                            src="https://r-media.volkswagen.com/v1/VW/55R/2022/MP1/20220326/ru-RU-ru/0Q0Q/GZ/0B3,0ES,0K0,0MR,0NB,0RE,1A5,1D0,1G9,1SK,1X1,1ZK,2EI,2FM,2H5,2J0,3CA,3FA,3GB,3H0,3L3,3LM,3QT,3S2,3T2,3ZU,4A3,4E0,4GF,4I2,4KC,4L2,4UF,4X3,4ZE,5C0,5KN,5MA,5RQ,5SL,5XJ,5ZF,6E2,6FF,6I0,6K2,6M0,6NA,6Q2,6XN,7AA,7B3,7L3,7M5,7MM,7N0,7P0,7Q0,7W0,7X0,7Y0,8G0,8IR,8N6,8Q1,8S6,8SK,8T6,8TB,8WA,9E5,9I5,9JA,9M0,9P9,9S6,9Z0,9ZX,A8B,AV1,B37,CY9,DG6,E0A,EL0,ER1,G0R,GP1,I8I,K8G,KA0,KH7,KL1,L0L,N4C,NZ3,Q1A,QJ0,QK0,QQ0,QV0,TL1,U9B,UH2,UK1,VF0/D6RimTile/b19d7b4a-df80-487c-908a-47785dbb35fc/a5560c4c73f6b0724d61964949b131af92437c4b962bd4f90582310a46d79ee4.jpg"
+                                            alt=""></div>
+                                </div>
+                                <div class="wheels__text">
+                                    <div class="wheels__title">Легкосплавные колесные диски Tusla 7J x 17</div>
+                                    <div class="wheels__price">11000 ₽</div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div id="optionsForm">
+                <div class="options__container">
+                    <label class="optionsCheckbox">
+                        <input type="checkbox" name="options" value="56700">
+                        <span>Складной буксировочный крюк с электроприводом</span>
+                    </label>
+                    <label class="optionsCheckbox">
+                        <input type="checkbox" name="options" value="6600">
+                        <span>Тканевые ковриики в салоне спереди и сзади</span>
+                    </label>
+                    <label class="optionsCheckbox">
+                        <input type="checkbox" name="options" value="48500">
+                        <span>Пакет "Зимний"</span>
+                    </label>
+                </div>
+
             </div>
 
             <div class="car">
                 <img src="https://r-media.volkswagen.com/v1/VW/55R/2022/MP1/20220324/ru-RU-ru/0Q0Q/GZ/0B3,0ES,0K0,0MR,0NB,0RE,1A5,1D0,1G9,1SK,1X0,1ZK,2EI,2FM,2H5,2J0,3CA,3FA,3GB,3H0,3L3,3LM,3QT,3S2,3T2,3ZU,4A3,4E0,4GX,4I2,4KC,4L6,4UF,4X3,4ZE,5C0,5KN,5MA,5RQ,5SL,5XJ,5ZF,6E2,6FF,6I0,6K2,6M0,6NA,6Q2,6XP,7AA,7B3,7L3,7M5,7MM,7N0,7P0,7Q0,7W0,7X2,7Y0,8G0,8IR,8N6,8Q1,8S6,8SK,8T6,8TB,8WA,9E5,9I5,9JA,9M0,9P9,9S6,9T1,9Z0,9ZX,A8B,AV1,B37,CY9,DG6,E0A,EL0,ER1,G1A,GP1,I8I,K8G,KA0,KH7,KL1,L0L,N4C,NZ3,Q1A,QJ0,QK0,QQ0,QV0,TL1,U9B,UH2,UK1,VF0/D6MainStageExterior/b19d7b4a-df80-487c-908a-47785dbb35fc/4656873da24a20c64f57a440321d9682870a3052f2164c342a5de48889290148.jpg?width=1678"
                     alt="" width="50%">
+
+
+                <!-- <img src="https://r-media.volkswagen.com/v1/VW/55R/2022/MP1/20220326/ru-RU-ru/7H7H/GZ/0B3,0ES,0K0,0MR,0NB,0RE,1A5,1D0,1G9,1SK,1X1,1ZK,2EI,2FM,2H5,2J0,3CA,3FA,3GB,3H0,3L3,3LM,3QT,3S2,3T2,3ZU,4A3,4E0,4GF,4I2,4KC,4L2,4UF,4X3,4ZE,5C0,5KN,5MA,5RQ,5SL,5XJ,5ZF,6E2,6FF,6I0,6K2,6M0,6NA,6Q2,6XN,7AA,7B3,7L3,7M5,7MM,7N0,7P0,7Q0,7W0,7X0,7Y0,8G0,8IR,8N6,8Q1,8S6,8SK,8T6,8TB,8WA,9E5,9I5,9JA,9M0,9P9,9S6,9Z0,9ZX,A8B,AV1,B37,CY9,DG6,E0A,EL0,ER1,G0R,GP1,I8I,K8G,KA0,KH7,KL1,L0L,N4C,NZ3,Q1A,QJ0,QK0,QQ0,QV0,TL1,U9B,UH2,UK1,VF0/D6MainStageExterior/b19d7b4a-df80-487c-908a-47785dbb35fc/59cc2765c34333c5b3e1b87b90a97d6945654c14ebc9436fc8dc2096572ec34e.jpg?width=1678"
+                    alt="" width="50%"> -->
+
+                <!-- <img src="https://r-media.volkswagen.com/v1/VW/55R/2022/MP1/20220326/ru-RU-ru/0A0A/GZ/0B3,0ES,0K0,0MR,0NB,0RE,1A5,1D0,1G9,1SK,1X1,1ZK,2EI,2FM,2H5,2J0,3CA,3FA,3GB,3H0,3L3,3LM,3QT,3S2,3T2,3ZU,4A3,4E0,4GF,4I2,4KC,4L2,4UF,4X3,4ZE,5C0,5KN,5MA,5RQ,5SL,5XJ,5ZF,6E2,6FF,6I0,6K2,6M0,6NA,6Q2,6XN,7AA,7B3,7L3,7M5,7MM,7N0,7P0,7Q0,7W0,7X0,7Y0,8G0,8IR,8N6,8Q1,8S6,8SK,8T6,8TB,8WA,9E5,9I5,9JA,9M0,9P9,9S6,9Z0,9ZX,A8B,AV1,B37,CY9,DG6,E0A,EL0,ER1,G0R,GP1,I8I,K8G,KA0,KH7,KL1,L0L,N4C,NZ3,Q1A,QJ0,QK0,QQ0,QV0,TL1,U9B,UH2,UK1,VF0/D6MainStageExterior/b19d7b4a-df80-487c-908a-47785dbb35fc/eca4a036d866f9391b6aea4f9538685f8f1b88152d837457e8b02e7ae2e0be1f.jpg?width=559"
+                    alt="" width="50%"> -->
+
+
             </div>
+
 
 
             <div class="spec">
@@ -64,22 +297,9 @@
                     </div>
                 </div>
 
-
-
-
-
             </div>
-
-
-
-
-
         </section>
-
     </main>
-
-
-
 
     <script src="/index.js"></script>
 </body>
