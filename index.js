@@ -75,7 +75,7 @@ optionsButtonNav.addEventListener("click", () => {
 // });
 // Вопрос: Если раскомментировать код выше, тогда блок engineForm будет исчезать при любом клике вне блока, что нам и нужно. НО функция engineButtonNav.addEventListener будет работать только при клике на gap (в css это .engine {row-gap: 15px;}) между title двигатель и кнопка. Связано ли это со всплытием и погружением событий?
 
-//upd. Вопрос про gap, конечно, остался, но использовать здесь такой вариант не получается, т.к. при выборе опций(мотора), клик же идет на область вне кнопки engine, и окно выбора закрывается (что в общем-то и логично, потому что написанная функция и должна это делать:))
+//upd. Вопрос про gap остался, но использовать здесь такой вариант не получается, т.к. при выборе опций(мотора), клик же идет на область вне кнопки engine, и окно выбора закрывается (что в общем-то и логично, потому что написанная функция и должна это делать:))
 
 
 
@@ -131,10 +131,16 @@ document.querySelector(".engineForm__radio").addEventListener("change", () => {
 });
 
 //Событие для расчета цены
-
 document.querySelector(".main").addEventListener("change", () => {
     let carTotalPrice = 0;
     let carPrice = document.querySelector('input[name="engineRadio"]:checked').value;
-    carTotalPrice = +carPrice + 1;
-    document.querySelector(".spec__total-price-price").innerHTML = carTotalPrice;
+    let colorPrice = document.querySelector('input[name="colorRadio"]:checked').value;
+    let interiorPrice = document.querySelector('input[name="interiorRadio"]:checked').value;
+    let wheelsPrice = document.querySelector('input[name="wheelsRadio"]:checked').value;
+
+
+    let additionsPrice = +colorPrice + +interiorPrice + +wheelsPrice;
+    document.querySelector('.spec__option-price').innerHTML = additionsPrice + ' руб.';
+    carTotalPrice = +carPrice + +additionsPrice;
+    document.querySelector(".spec__total-price-price").innerHTML = carTotalPrice + ' руб.';
 });
