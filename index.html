@@ -16,10 +16,10 @@
         <h4 id="carEngineChoosen">Tiguan Respect</h4>
     </header>
 
-    <main>
+    <main class="main">
         <section class="configurator">
             <div class="parameters">
-                <button class="engine">
+                <button class="engine" id="engine">
                     <div class="engine__title">Двигатель</div>
                     <div class="engine__button-area">
                         <div id="engineButton" class="parameters__button"> &#128504;</div>
@@ -52,7 +52,7 @@
             </div>
 
             <div id="engineForm">
-                <select class="engineForm__select" id="engineFormInput">
+                <select class="engineForm__select">
                     <option class=" input" value="transmissionAll">КПП</option>
                     <option class="input" value="transmissionManual">Механика</option>
                     <option class="input" value="transmissionAutomatic">Автомат</option>
@@ -62,7 +62,7 @@
                         <input id="engine1" type="radio" name="engineRadio" value="2134900">
                         <label for="engine1">
                             <div class="engine__specifications">
-                                <div class="engine__title-price">
+                                <div class="engine__title-price engine1__title-price">
                                     <div class="engine__title">TSI 125 л.с.<br> 6-МКП</div>
                                     <div class="engine__price">2134900 ₽</div>
                                 </div>
@@ -81,7 +81,7 @@
                         <input id="engine2" type="radio" name="engineRadio" value="2264900">
                         <label for="engine2">
                             <div class="engine__specifications">
-                                <div class="engine__title-price">
+                                <div class="engine__title-price engine2__title-price">
                                     <div class="engine__title">TSI 150 л.с.<br> 6-АКП</div>
                                     <div class="engine__price">2264900 ₽</div>
                                 </div>
@@ -100,7 +100,7 @@
                         <input id="engine3" type="radio" name="engineRadio" value="2364900">
                         <label for="engine3">
                             <div class="engine__specifications">
-                                <div class="engine__title-price">
+                                <div class="engine__title-price engine3__title-price">
                                     <div class="engine__title">TSI 4MOTION 150 л.с.<br> 6-АКП</div>
                                     <div class="engine__price">2364900 ₽</div>
                                 </div>
@@ -283,7 +283,7 @@
                     <div class="spec__title">Спецификация</div>
                     <div class="spec__car">
                         <div class="spec__car-title">Tiguan Respect</div>
-                        <div class="spec__car-price">1</div>
+                        <div class="spec__car-price"></div>
                     </div>
                     <div class="spec__option">
                         <div class="spec__option-title">Сумма опций</div>
