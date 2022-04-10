@@ -77,12 +77,12 @@ optionsButtonNav.addEventListener("click", () => {
 //Вопрос: Если раскомментировать код выше, тогда блок engineForm будет исчезать при любом клике вне блока, что нам и нужно. НО функция engineButtonNav.addEventListener будет работать только при клике на gap (в css это .engine {row-gap: 15px;}) между title двигатель и кнопка. Связано ли это со всплытием и погружением событий?
 
 document.getElementById('engineFormInput').onchange = function () {
-    const value = document.getElementById('engineFormInput').value;
-    if (value == "transmissionAutomatic") {
+    const engineType = document.getElementById('engineFormInput').value;
+    if (engineType == "transmissionAutomatic") {
         engineMKP.classList.add('hide');
         engineAKP.classList.remove('hide');
         engineAKP2.classList.remove('hide');
-    } else if (value == "transmissionManual") {
+    } else if (engineType == "transmissionManual") {
         engineMKP.classList.remove('hide');
         engineAKP.classList.add('hide');
         engineAKP2.classList.add('hide');
@@ -119,3 +119,8 @@ color3.onclick = function () {
 //     document.getElementById("carImage").src =
 //         "https://r-media.volkswagen.com/v1/VW/55R/2022/MP1/20220326/ru-RU-ru/0A0A/GZ/0B3,0ES,0K0,0MR,0NB,0RE,1A5,1D0,1G9,1SK,1X0,1ZK,2EI,2FM,2H5,2J0,3CA,3FA,3GB,3H0,3L3,3LM,3QT,3S2,3T2,3ZU,4A3,4E0,4GF,4I2,4KC,4L2,4UF,4X3,4ZE,5C0,5KN,5MA,5RQ,5SL,5XJ,5ZF,6E2,6FF,6I0,6K2,6M0,6NA,6Q2,6XN,7AA,7B3,7L3,7M5,7MM,7N0,7P0,7Q0,7W0,7X0,7Y0,8G0,8IR,8N6,8Q1,8S6,8SK,8T6,8TB,8WA,9E5,9I5,9JA,9M0,9P9,9S6,9Z0,9ZX,A8B,AV1,B37,CQ9,DG6,E0A,EL0,ER1,G1A,GP1,I8I,K8G,KA0,KH7,KL1,L0L,N4C,NZ3,Q1A,QJ0,QK0,QQ0,QV0,TL1,U9B,UH2,UK1,VF0/D6MainStageExterior/b19d7b4a-df80-487c-908a-47785dbb35fc/8cfb53188ecb2da6b6c06ae0ccc19ef1f73d8f2519d1159e8c4c5c08c243cf8b.jpg?width=1678";
 // }
+
+document.querySelector(".engineForm__radio").addEventListener("change", () => {
+    const carPrice = document.querySelector('input[name="engineRadio"]:checked').value;
+    document.getElementById('spec__car-price').innerHTML = carPrice + ' р.';
+});
