@@ -138,8 +138,19 @@ document.querySelector(".main").addEventListener("change", () => {
     let interiorPrice = document.querySelector('input[name="interiorRadio"]:checked').value;
     let wheelsPrice = document.querySelector('input[name="wheelsRadio"]:checked').value;
 
+    let optionPrices = document.querySelectorAll(".optionsCheckboxPrice");
+    let optionPricesSum = 0;
+    for (let optionPrice of optionPrices) {
+        let currentPrice;
+        if (optionPrice.checked) {
+            currentPrice = +(optionPrice.value);
+        } else {
+            currentPrice = 0;
+        }
+        optionPricesSum = optionPricesSum + currentPrice;
+    }
 
-    let additionsPrice = +colorPrice + +interiorPrice + +wheelsPrice;
+    let additionsPrice = +colorPrice + +interiorPrice + +wheelsPrice + +optionPricesSum;
     document.querySelector('.spec__option-price').innerHTML = additionsPrice + ' руб.';
     carTotalPrice = +carPrice + +additionsPrice;
     document.querySelector(".spec__total-price-price").innerHTML = carTotalPrice + ' руб.';
