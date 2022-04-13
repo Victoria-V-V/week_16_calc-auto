@@ -18,7 +18,6 @@ engineButtonNav.addEventListener("click", () => {
     interiorForm.classList.add('hide');
     wheelsForm.classList.add('hide');
     optionsForm.classList.add('hide');
-    //Хочется оптимизировать код и убрать хотя бы первые 4 строки, в этой фукнции (и аналогично для color,interior,wheels,options), но не получается, см. вопрос ниже.
 
     engineForm.classList.toggle('hide');
     engineForm.classList.toggle('active');
@@ -79,15 +78,9 @@ optionsButtonNav.addEventListener("click", () => {
 //         engineForm.classList.remove('active');
 //     }
 // });
-// Вопрос: Если раскомментировать код выше, тогда блок engineForm будет исчезать при любом клике вне блока, что нам и нужно. НО функция engineButtonNav.addEventListener будет работать только при клике на gap (в css это .engine {row-gap: 15px;}) между title двигатель и кнопка. Связано ли это со всплытием и погружением событий?
-
-//upd. Вопрос про gap остался, но использовать здесь такой вариант не получается, т.к. при выборе опций(мотора), клик же идет на область вне кнопки engine, и окно выбора закрывается (что в общем-то и логично, потому что написанная функция и должна это делать:))
 
 
-
-
-
-//События для выбора мотора и цвета без учета в стоимость (для изменения текста и картинки) Подумать, как объединить с расчетом цены, чтобы не повторяться.
+//События для выбора мотора и цвета без учета в стоимость (для изменения текста и картинки)
 document.querySelector('.engineForm__select').addEventListener("change", () => {
     const engineMKP = document.querySelector('#engineMKP');
     const engineAKP = document.querySelector('#engineAKP');
@@ -139,8 +132,31 @@ document.querySelector(".engineForm__radio").addEventListener("change", () => {
 
 });
 
+//Отключение кнопок выбора допов, если не выбран двигатель
+document.querySelector(".color").disabled = true;
+document.querySelector(".interior").disabled = true;
+document.querySelector(".wheels").disabled = true;
+document.querySelector(".options").disabled = true;
+
 //Событие для расчета цены
 document.querySelector(".main").addEventListener("change", () => {
+
+    for (;;) {
+        if (document.querySelector('input[name="engineRadio"]:checked') == null) {
+            document.querySelector(".color").disabled = true;
+            document.querySelector(".interior").disabled = true;
+            document.querySelector(".wheels").disabled = true;
+            document.querySelector(".options").disabled = true;
+        }
+        if (document.querySelector('input[name="engineRadio"]:checked') != null)
+            document.querySelector(".color").disabled = false;
+        document.querySelector(".interior").disabled = false;
+        document.querySelector(".wheels").disabled = false;
+        document.querySelector(".options").disabled = false;
+        document.querySelector(".warningMessage").innerHTML = '';
+        break;
+    }
+
     let carTotalPrice = 0;
     let carPrice = document.querySelector('input[name="engineRadio"]:checked').value;
     let colorPrice = document.querySelector('input[name="colorRadio"]:checked').value;

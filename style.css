@@ -356,3 +356,7 @@ h4 {
 .options__price {
     font-weight: bold;
 }
+
+.warningMessage {
+    color: red;
+}
