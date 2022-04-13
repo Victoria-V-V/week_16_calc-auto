@@ -1,3 +1,9 @@
+const engineForm = document.querySelector('#engineForm');
+const colorForm = document.querySelector('#colorForm');
+const interiorForm = document.querySelector('#interiorForm');
+const wheelsForm = document.querySelector('#wheelsForm');
+const optionsForm = document.querySelector('#optionsForm');
+
 (() => {
     engineForm.classList.add('hide');
     colorForm.classList.add('hide');
@@ -16,7 +22,7 @@ engineButtonNav.addEventListener("click", () => {
 
     engineForm.classList.toggle('hide');
     engineForm.classList.toggle('active');
-    engineButton.classList.add('parameters__button-checked');
+    document.querySelector('#engineButton').classList.add('parameters__button-checked');
 });
 
 const colorButtonNav = document.querySelector('.color');
@@ -28,7 +34,7 @@ colorButtonNav.addEventListener("click", () => {
 
     colorForm.classList.toggle('hide');
     colorForm.classList.toggle('active');
-    colorButton.classList.add('parameters__button-checked');
+    document.querySelector('#colorButton').classList.add('parameters__button-checked');
 });
 
 const interiorButtonNav = document.querySelector('.interior');
@@ -40,7 +46,7 @@ interiorButtonNav.addEventListener("click", () => {
 
     interiorForm.classList.toggle('hide');
     interiorForm.classList.toggle('active');
-    interiorButton.classList.add('parameters__button-checked');
+    document.querySelector('#interiorButton').classList.add('parameters__button-checked');
 });
 
 const wheelsButtonNav = document.querySelector('.wheels');
@@ -52,7 +58,7 @@ wheelsButtonNav.addEventListener("click", () => {
 
     wheelsForm.classList.toggle('hide');
     wheelsForm.classList.toggle('active');
-    wheelsButton.classList.add('parameters__button-checked');
+    document.querySelector('#wheelsButton').classList.add('parameters__button-checked');
 });
 
 const optionsButtonNav = document.querySelector('.options');
@@ -64,7 +70,7 @@ optionsButtonNav.addEventListener("click", () => {
 
     optionsForm.classList.toggle('hide');
     optionsForm.classList.toggle('active');
-    optionsButton.classList.add('parameters__button-checked');
+    document.querySelector('#optionsButton').classList.add('parameters__button-checked');
 });
 
 // window.addEventListener('click', function (e) {
@@ -83,6 +89,9 @@ optionsButtonNav.addEventListener("click", () => {
 
 //События для выбора мотора и цвета без учета в стоимость (для изменения текста и картинки) Подумать, как объединить с расчетом цены, чтобы не повторяться.
 document.querySelector('.engineForm__select').addEventListener("change", () => {
+    const engineMKP = document.querySelector('#engineMKP');
+    const engineAKP = document.querySelector('#engineAKP');
+    const engineAKP2 = document.querySelector('#engineAKP2');
     const engineType = document.querySelector('.engineForm__select').value;
     if (engineType == "transmissionAutomatic") {
         engineMKP.classList.add('hide');
